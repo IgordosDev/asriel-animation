@@ -1,0 +1,151 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.unselectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+}
+
+body {
+    background-color: black;
+}
+
+.hearts {
+    background: url(/asriel.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: bg 5s infinite ease-in-out;
+}
+
+.container { 
+    height: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    margin: auto;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+.hearts > .container > * {
+    width: 100%;
+    height: 2.5vh;
+    animation: anim-v 3s infinite ease-in-out;
+    position: absolute;
+    margin: auto;
+    display: block;
+    left: 0;
+    right: 0;
+    
+}
+.hearts > .container > * > img {
+    width: 2.5vh;
+    height: 2.5vh;
+    animation: anim-h 6s infinite ease-in-out;
+}
+
+.hearts > .container > *:nth-child(1) {
+    animation-delay: 0s;
+}
+.hearts > .container > *:nth-child(2) {
+    animation-delay: -0.8s;
+}
+.hearts > .container > *:nth-child(3) {
+    animation-delay: -1.6s;
+}
+.hearts > .container > *:nth-child(4) {
+    animation-delay: -2.4s;
+}
+.hearts > .container > *:nth-child(5) {
+    animation-delay: -3.2s;
+}
+.hearts > .container > *:nth-child(6) {
+    animation-delay: -4s;
+}
+.hearts > .container > *:nth-child(7) {
+    animation-delay: -4.8s;
+}
+
+.hearts > .container > * > .heart1 {
+    animation-delay: 0s;
+}
+.hearts > .container > * > .heart2 {
+    animation-delay: -0.8s;
+}
+.hearts > .container > * > .heart3 {
+    animation-delay: -1.6s;
+}
+.hearts > .container > * > .heart4 {
+    animation-delay: -2.4s;
+}
+.hearts > .container > * > .heart5 {
+    animation-delay: -3.2s;
+}
+.hearts > .container > * > .heart6 {
+    animation-delay: -4s;
+}
+.hearts > .container > * > .heart7 {
+    animation-delay: -4.8s;
+}
+
+
+@keyframes pulse {
+    0% {
+        width: 80%;
+        height: 50%;
+    }
+    50% {
+        width: 90%;
+        height: 60%;
+    }
+    100% {
+        width: 80%;
+        height: 50%;
+    }
+}
+
+@keyframes anim-h { 
+    0% {
+        margin-left: 0%;
+    }
+
+    50% {
+        margin-left: calc(100% - 2.5vh);
+    }
+
+    100% {
+        margin-left: 0%;
+    }
+}
+
+@keyframes anim-v { 
+    0% {
+        bottom: 0%;
+    }
+
+    50% {
+        bottom: 100%;
+    }
+
+    100% {
+        bottom: 0%;
+    }
+}
+
+@keyframes bg {
+    0% {
+        margin-top: 20vh;
+    }
+    50% {
+        margin-top: 40vh;
+    }
+    100% {
+        margin-top: 20vh;
+    }
+}
