@@ -18,7 +18,7 @@ body {
 }
 
 .hearts {
-    background: url(/asriel.png);
+    background: url("https://github.com/IgordosDev/asriel-animation/raw/master/asriel.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
